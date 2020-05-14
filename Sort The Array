@@ -1,0 +1,22 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+
+public class UdemyClasses
+{
+	
+	
+	public static void main(String args[]) 
+	{
+		int array[] = {1,2,3,4,5,6};
+		
+		Arrays.sort(array);	// default it is in ascending order
+		
+		for(int i : array) 
+		{
+			System.out.println(i);
+		}
+		
+	}
+}
