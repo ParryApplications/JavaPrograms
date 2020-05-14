@@ -1,0 +1,42 @@
+import java.lang.*;	//syatem library file
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+
+public class UdemyClasses
+{
+	
+	
+	public static void main(String args[]) 
+	{
+		int i,j;
+		
+		System.out.println("Enter the size of two dimensional array");
+
+		Scanner obj = new Scanner(System.in);
+		
+		i = obj.nextInt();
+		j = obj.nextInt();
+				
+		int array[][] = new int[i][j];
+		
+		for(int x=0;x<i;x++) 
+		{
+			for(int y=0;y<j;y++) 
+			{
+				System.out.print("array ["+x+"] ["
+						+y+"] = " );
+				array[x][y] = obj.nextInt();
+			}
+		}
+		
+		for(int x=0;x<i;x++) 
+		{
+			for(int y=0;y<j;y++)  
+			{
+				System.out.print(array[x][y]+ "\t");
+//				array[i][j] = obj.nextInt();
+			}
+			System.out.println();
+		}
+	}
+}
