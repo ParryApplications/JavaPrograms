@@ -1,0 +1,30 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+
+class paras
+{
+	private String name; 	//instance variable
+	//make getters and setters
+	
+	void setName(String name) 
+	{
+		this.name = name;
+	}
+	
+	String getName() 
+	{
+		return name;
+	}
+}
+
+public class UdemyClasses
+{
+	public static void main(String []args) 
+	{
+		paras obj = new paras();
+		obj.setName("Paras Bhatt");
+		System.out.println(obj.getName());
+	}
+}
