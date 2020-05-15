@@ -1,0 +1,54 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+
+
+class paras
+{	
+
+	void fn1() 
+	{
+		System.out.println("fn1");
+	}
+	
+	void fn1() 
+	{
+		System.out.println("fn2");
+	}	
+		
+	
+	void fn2(int a) 
+	{
+		System.out.println("fn3");
+	}
+	
+	void fn2(float a) 
+	{
+		System.out.println("fn4");
+	}
+	
+	//BY CHANGINF THE RETURN TYPE FN WILL NOT EFFECT
+	
+//	int fn2(float a) 
+//	{
+//		/*error reason is bcz fn2 = above fn2
+//		  it dosen't mean of any return value
+//		 */ 
+//		 
+//		System.out.println("fn5");
+//	}
+}
+
+public class UdemyClasses
+{
+	
+	
+	public static void main(String args[]) 
+	{
+		paras obj = new paras();
+		obj.fn2(2.0f);
+		obj.fn2(2);
+		obj.fn1();//whose declared first will call
+	}
+}
