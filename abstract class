@@ -1,0 +1,39 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+
+abstract class paras
+{
+	void fn() 
+	{
+		System.out.println("hello paras");
+	}
+	
+	abstract void fn2();
+}
+
+class bhatt extends paras
+{
+
+	@Override
+	void fn2() 
+	{
+		System.out.println("hello bhatt");		
+	}
+	
+}
+
+public class UdemyClasses extends bhatt
+{
+	public static void main(String args[]) 
+	{
+		paras ref = new bhatt();	//this is how u can make super_class
+		//ref var with the object of sub_class
+		
+		ref.fn();
+		ref.fn2();
+	}
+}
