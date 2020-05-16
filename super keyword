@@ -1,0 +1,32 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+class paras
+{
+	void fn() 
+	{
+		System.out.println("hey paras");
+	}
+}
+
+
+class bhatt extends paras
+{
+	void fn() 
+	{
+		super.fn();
+	}
+}
+public class UdemyClasses extends bhatt
+{
+	public static void main(String agrs[]) 
+	{
+		bhatt obj = new bhatt();
+		obj.fn();
+	}
+	
+}
+
