@@ -1,0 +1,43 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+class super_class
+{
+	super_class()
+	{
+		System.out.println("hey super class without args");
+	}
+	
+	super_class(int a)
+	{
+		System.out.println("hey super class with args");
+	}
+}
+
+class base_class extends super_class
+{
+	base_class()
+	{
+		System.out.println("hey base class without args");
+	}
+	
+	base_class(int a)
+	{
+		super(a);
+		System.out.println("hey base class with args");
+	}
+	
+}
+
+public class UdemyClasses extends base_class
+{
+	public static void main(String args[]) 
+	{
+		base_class obj = new base_class();
+		
+		base_class ocj2 = new base_class(1);
+	}
+}
