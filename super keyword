@@ -30,3 +30,49 @@ public class UdemyClasses extends bhatt
 	
 }
 
+*********************************NEXT EXAMPLE****************************************
+
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+class paras
+{
+	void fn() 
+	{
+		System.out.println("hey paras");
+	}
+}
+
+
+class bhatt extends paras
+{
+	void fn() 
+	{
+		super.fn();
+		System.out.println("hey bhatt");
+	}
+}
+
+class pb extends bhatt
+{
+	void fn() 
+	{
+		super.fn();
+		System.out.println("hey pb");
+	}
+}
+
+public class UdemyClasses extends pb
+{
+	public static void main(String agrs[]) 
+	{
+		pb obj = new pb();
+		obj.fn();
+	}
+	
+}
+
+
