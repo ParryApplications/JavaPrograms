@@ -1,0 +1,57 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+
+class paras
+{
+	
+	static void method2()
+	{
+		System.out.println("hey paras again outside the class!!!");
+	}
+	
+}
+
+public class UdemyClasses
+{
+	static int a,c;
+	int b;//to access b within a static block 
+	//you need to declare it as static
+	
+	static //you can't access non static member in the static field
+	{//by default this is void
+		a=10;
+		c=a+a;
+//		b=c;
+		
+		System.out.println("hey paras in static block!!!");
+		System.out.println(a);
+	}
+	
+	static void method() 
+	{
+		System.out.println("Hey paras!!!");
+	}
+	
+	void method3() 
+	{
+		System.out.println("hey paras inside the class!!!");
+	}
+	
+	public static void main(String args[]) //note that within a static field method only static field are allow to access instead of non static field
+	{
+		method();	//you can call it directly but only in a class level
+		
+		paras obj = new paras();
+		obj.method2();
+	
+		
+//		method3();
+		/*if you want to access static method then convert
+		mthod3() to static field
+		*/
+		
+		System.out.println("hey paras on last "+c);
+	}
+}
