@@ -1,0 +1,21 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	{
+		//ArrayIndexOutOfBond
+		
+		int a[] = {1,2,3};
+		
+		for(int i=0;i<=a.length;i++) 
+		{
+			System.out.println(a[i]);
+		}
+		
+	}
+}
