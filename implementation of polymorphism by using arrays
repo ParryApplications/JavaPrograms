@@ -1,0 +1,78 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+class parasbhatt
+{
+	void fn() 
+	{
+		System.out.println("hey paras bhatt");
+	}
+}
+
+class paras extends parasbhatt
+{
+	void fn() 
+	{
+		System.out.println("hey paras");
+	}
+}
+
+class bhatt extends parasbhatt
+{
+	void fn() 
+	{
+		System.out.println("hey bhatt");
+	}
+}
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	{
+//		int array[] = new int[3];
+		parasbhatt ref[] = new parasbhatt[3];
+		
+		for(int i=0;i<ref.length;i++) 
+		{
+			int option;
+			System.out.println("choose your option:");
+			
+			Scanner take = new Scanner(System.in);
+			option = take.nextInt();
+			
+			switch(option) 
+			{
+			case 1:
+				ref[i] = new parasbhatt(); 
+				break;
+				
+			case 2:
+				ref[i] = new paras(); 
+				break;
+				
+			case 3:
+				ref[i] = new bhatt(); 
+				break;
+				
+			case 4:
+				break;			
+			}
+			if(option == 4) 
+			{
+				System.out.println("EXIT");
+				break;
+			}
+			
+			ref[i].fn();
+			
+		}
+		
+		for(int i=0;i<ref.length;i++) 
+		{
+			ref[i].fn();
+		}
+	}
+}
