@@ -1,0 +1,34 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	{
+		//arithmatic exception
+		try 
+		{
+			int a,b,c;
+			Scanner take = new Scanner(System.in);
+			System.out.println("Enter the Value of a and b");
+			a = take.nextInt();
+			b = take.nextInt();
+			
+			c=a/b;	//if b=0 then exception will raise
+			
+			System.out.println("Value of C Will be: "+c);
+			
+		}
+		catch(ArithmeticException e) 
+		{
+			System.out.println("ERROR...Reason = "+e);
+		}
+		finally
+		{
+			System.out.println("Whether a program will face exception or not this method runs.");
+		}
+	}
+}
