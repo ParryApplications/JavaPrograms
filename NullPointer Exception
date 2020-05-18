@@ -1,0 +1,41 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+class paras
+{
+	void fn2() 
+	{
+		System.out.println("here is the fn2");
+	}
+}
+
+public class UdemyClasses
+{
+	static void fn() 
+	{
+		System.out.println("here is the fn method");
+		paras obj = new paras();
+		obj.fn2();
+		
+		obj = null;
+		obj.fn2();//after initialize the obj to null this exception will show
+	}
+	public static void main(String args[]) 
+	{
+		//NullPointer
+		try 
+		{
+			fn();	//static keyword is used to use your method
+					//event if you both are in the same class
+		}
+		catch(NullPointerException e) 
+		{
+			System.out.println(e);
+		}
+		
+		
+	}
+}
