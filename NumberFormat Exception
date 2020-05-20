@@ -1,0 +1,26 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	{
+		System.out.println("Enter a String if u want a exception!");
+		Scanner obj = new Scanner(System.in);
+		String a = obj.next();
+		float b ;
+		try 
+		{
+			b = Float.parseFloat(a) ;
+			System.out.println("Value of b is : "+b);
+		}
+		catch(NumberFormatException e) 
+		{
+			System.out.println(e);
+		}
+		
+	}
+}
