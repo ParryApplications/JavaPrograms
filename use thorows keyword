@@ -1,0 +1,33 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+public class UdemyClasses
+{
+	static void fn(int a) throws IllegalAccessException 
+	{
+		if(a == 5) 
+		{
+			IllegalAccessException obj1 = new IllegalAccessException("ERROR");
+			throw(obj1);
+		}	
+		
+		System.out.println("Normal State");	
+	}
+	public static void main(String args[]) 
+	{		
+		try 
+		{
+			fn(5);
+					
+			
+		}
+		
+		catch(Exception ref) 
+		{
+			System.out.println(ref);
+		}
+	}
+}
