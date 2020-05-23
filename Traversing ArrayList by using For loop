@@ -1,0 +1,30 @@
+import java.lang.*;	//syatem library file
+import java.lang.reflect.Array;
+import java.io.*;	//printstream classes
+import java.util.*;	//bcz of scanner class
+import java.io.*;
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	
+	{
+		ArrayList<String> ArrayRef = new ArrayList<String>();
+		
+		ArrayRef.add("Parvi");
+		ArrayRef.add("kishu");
+		ArrayRef.add("Charu");
+		ArrayRef.add("love");
+		ArrayRef.add("Sanchit");
+		ArrayRef.add("mummy");
+		ArrayRef.add("papa");
+		ArrayRef.add("subscribers");
+		
+		ArrayRef.remove(7);	//subscribers String will remove
+		for(String obj : ArrayRef) 
+		{
+			System.out.println(obj);
+		}
+		
+	}
+}
