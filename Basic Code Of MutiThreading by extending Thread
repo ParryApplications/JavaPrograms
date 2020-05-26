@@ -1,0 +1,18 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+
+public class UdemyClasses extends Thread
+{
+	public void run() 
+	{
+		System.out.println("hello there!");
+	}
+	
+	public static void main(String args[]) 
+	{
+		UdemyClasses obj = new UdemyClasses();
+		obj.start();
+	}
+}
