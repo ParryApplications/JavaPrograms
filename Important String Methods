@@ -1,0 +1,41 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+// String important functions
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	{
+		String name = "Paras Bhatt";
+		
+		String ForTrim = "      TRIM        ";
+		
+		int a = name.length();
+		
+		System.out.println(name.concat(" is a good boy!")); 	//concat()
+		
+		System.out.println(name.toUpperCase());	//toUpperCase()
+		
+		System.out.println(name.toLowerCase());	//toLowerCase()
+		
+		System.out.println(ForTrim.trim().concat(" successfully trimed!!!"));	//trim()
+		
+		System.out.println(a);	//length()
+		
+		System.out.println(name.replace("Paras","Krishna")); 	//replace()
+		
+		System.out.println(name.substring(2,7));	//substring()
+		
+		System.out.println(name.isEmpty());		//isEmpty()
+		
+		System.out.println(name.startsWith("Paras"));	//startsWith()
+		
+		System.out.println(name.endsWith("Paras"));		//endsWith()
+		
+		System.out.println(name.indexOf("s"));		//indexOf()
+		
+		System.out.println(name.charAt(4));			//charAt()
+	}
+}
