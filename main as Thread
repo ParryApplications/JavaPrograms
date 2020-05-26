@@ -1,0 +1,14 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	{
+		Thread ref = Thread.currentThread();
+		Thread.currentThread().setName("ParasThread");
+		ref.setPriority(8);
+		System.out.println(ref);
+	}
+}
