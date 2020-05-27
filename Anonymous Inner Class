@@ -1,0 +1,44 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+abstract class paras
+{
+	abstract void fn();
+}
+
+interface bhatt
+{
+	void paras();
+}
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	{
+		paras ref = new paras() 	//anonymous Inner class obj
+		{
+			@Override
+			void fn() 
+			{
+				// TODO Auto-generated method stub
+				System.out.println("hello from abstract");
+			}
+			
+		};
+		
+		ref.fn();
+		
+		bhatt ref2 = new bhatt() 
+		{
+			public void paras() 	//use public modifier
+			{
+				System.out.println("hello from interface");
+				
+			}
+		};
+		
+		ref2.paras();
+		
+	}
+}
