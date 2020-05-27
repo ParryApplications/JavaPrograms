@@ -1,0 +1,24 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+interface bhatt
+{//contain abstract method
+	void paras();
+}
+
+//NOTE : This only be done in the interface (bhatt) not abstract(paras)
+
+public class UdemyClasses
+{
+	public static void main(String args[]) 
+	{
+		bhatt ref1 =()->	//for interface only
+		{
+			//this whole under this braces are called as LAMBDA expression
+			System.out.println("hello abstract");
+		};
+		
+		ref1.paras();
+	}
+}
