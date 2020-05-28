@@ -1,0 +1,28 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+public class UdemyClasses
+{
+	public static void main(String args[]) throws IOException 
+	{
+		int file_data;
+		FileInputStream file_stream = null ;
+		
+		try 
+		{
+			file_stream = new FileInputStream("<enter the location of your file>");
+		}
+		catch(FileNotFoundException e) 
+		{
+			System.out.println("File Not Found");
+		}
+		
+		do
+		{
+			file_data = file_stream.read();
+			System.out.print((char)file_data);
+		}while(file_data != -1);
+		file_stream.close();
+	}
+}
