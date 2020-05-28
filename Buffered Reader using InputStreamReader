@@ -1,0 +1,15 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+public class UdemyClasses
+{
+	public static void main(String args[]) throws IOException 
+	{
+			String name ;
+			System.out.println("Enter The Name");
+			BufferedReader ref = new BufferedReader(new InputStreamReader(System.in));
+			name = ref.readLine();
+			System.out.println("Name is: "+name);					
+	}
+}
