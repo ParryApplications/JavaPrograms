@@ -1,0 +1,31 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+public class UdemyClasses
+{
+	public static void main(String args[]) throws IOException 
+	{
+		FileInputStream file_ip = null;
+		FileOutputStream file_op = null;
+		int data;
+		
+		try 
+		{
+			file_ip = new FileInputStream("d:\\paras_udemy.txt");
+			file_op = new FileOutputStream("d:\\paras_new");
+			
+		}catch(FileNotFoundException e) 
+		{
+			
+		}
+		
+		do {
+			
+			data = file_ip.read();
+			file_op.write(data);	
+			
+			System.out.print((char)data);
+		}while(data != -1);
+	}
+}
