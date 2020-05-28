@@ -1,0 +1,30 @@
+import java.applet.*;
+import java.awt.*;
+
+public class applet_class extends Applet
+{
+	public void init() 	//when an applet is born
+	{
+		setForeground(Color.black);
+		setBackground(Color.red);
+	}
+	
+	public void start() 	//when your applet actually run/execute
+	{
+	}
+	
+	public void paint(Graphics g) 	//this used to draw something to the o/p screen
+	{
+		g.setFont(new Font("Times New Roman",Font.BOLD,25));
+		g.drawString("Paras Learn Java From Udemy", 125, 50);
+	}
+	
+	public void stop() //after minimize this method calls and again after maximise start and paint fn callls
+	{
+		setForeground(Color.white);
+		setBackground(Color.green);
+	}
+	public void Destroy() 	//after click close this method calls
+	{
+	}
+}
