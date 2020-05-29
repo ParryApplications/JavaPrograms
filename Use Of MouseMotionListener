@@ -1,0 +1,44 @@
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+public class applet_class extends Applet implements MouseMotionListener
+{
+	int x,y;
+	String str = "null";
+
+	public void init()
+	{
+		addMouseMotionListener(this);
+	}
+
+	
+	public void paint(Graphics g) 	//draw graphics or o/p to the screen
+	{
+		g.setFont(new Font("Times New Roman",Font.BOLD,50));
+		g.drawString(str, 120, 120);
+	}
+
+
+	@Override
+	public void mouseDragged(MouseEvent arg0) 
+	{
+	x=arg0.getX();	y = arg0.getY();
+		
+		str = "Mouse Draged ("+x+","+y+")";		
+		repaint();	
+	}
+
+
+	@Override
+	public void mouseMoved(MouseEvent arg0)
+	{
+		x=arg0.getX();	y = arg0.getY();
+		
+		str = "Mouse Moved ("+x+","+y+")";		
+		repaint();
+	}
+	
+}
