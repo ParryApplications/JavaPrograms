@@ -1,0 +1,24 @@
+import java.applet.*;
+import java.awt.*;
+
+public class applet_class extends Applet
+{
+	TextField t1,t2;
+	Label l1,l2;
+	
+	public void init() 
+	{
+		setLayout(new FlowLayout(FlowLayout.LEADING));
+		t1 = new TextField(30);		//30 is just a width
+		t2 = new TextField(10);
+		
+		l1 = new Label("Enter Your Name");
+		l2 = new Label("Enter Your Phone Number");
+		
+		//it is imp to show or to add your Components to your Applet
+		add(l1);
+		add(t1);
+		add(l2);
+		add(t2);
+	}
+}
