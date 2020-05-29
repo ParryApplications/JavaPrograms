@@ -1,0 +1,57 @@
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+public class applet_class extends Applet implements MouseListener
+{
+	int x,y;
+	String str = "null";
+
+	public void init()
+	{
+		addMouseListener(this);
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) 	//when a mouse is clicked within in the applet
+	{
+		x=e.getX();	//to take x axis
+		y=e.getY();	//to take y axis
+		
+		showStatus("Mouse Clicked at ("+x+","+y+")");
+		str = "Mouse Clicked at ("+x+","+y+")";
+		repaint();	//to call paint method
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) 	//when mouse come back to applet
+	{
+		showStatus("Mouse Entered");		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e)	//when mouse exit from an applet 
+	{
+		showStatus("Mouse Exited");		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) 	//when you press something within the applet
+	{
+		showStatus("Mouse Pressed");
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) //when you released the mouse
+	{
+		showStatus("Mouse Released");		
+	}
+	
+	public void paint(Graphics g) 	//draw graphics or o/p to the screen
+	{
+		g.setFont(new Font("Times New Roman",Font.BOLD,50));
+		g.drawString(str, 120, 120);
+	}
+	
+}
