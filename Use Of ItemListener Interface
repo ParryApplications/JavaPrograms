@@ -1,0 +1,35 @@
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class applet_class extends Applet implements ItemListener
+{
+	Checkbox c1;
+	int no = 0;
+	
+	public void init() 
+	{
+		setLayout(new FlowLayout(FlowLayout.CENTER));
+		
+		c1 = new Checkbox("Android");
+				
+		add(c1);
+		
+		c1.addItemListener(this);
+	}
+
+	@Override
+	public void itemStateChanged(ItemEvent arg0) 
+	{
+			boolean b = c1.getState();
+			
+			if(b) 
+			{
+				setBackground(Color.red);
+			}
+			else 
+			{
+				setBackground(Color.blue);
+			}
+	}
+}
