@@ -1,0 +1,27 @@
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class applet_class extends Applet implements AdjustmentListener
+{//this listener is used for scrollbar ajustments
+	Scrollbar scroll_id;
+	Label l1;
+	
+	public void init() 
+	{
+		setLayout(null);
+		l1 = new Label("");
+		l1.setBounds(250,100,100,50);
+		scroll_id = new Scrollbar(Scrollbar.HORIZONTAL,50,1,1,100);	//orientation,thumb position,thumb size,min,maxx
+		scroll_id.setBounds(250,200,400,50);
+		scroll_id.addAdjustmentListener(this);
+		add(scroll_id);
+		add(l1);
+	}
+
+	@Override
+	public void adjustmentValueChanged(AdjustmentEvent arg0) {
+		int a = scroll_id.getValue();
+		l1.setText("Value is: "+a);
+	}
+}
