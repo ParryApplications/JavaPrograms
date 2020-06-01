@@ -1,0 +1,35 @@
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class applet_class extends Applet implements ActionListener
+{	
+	List list;
+	String str= "";
+	public void init() 
+	{
+		list = new List(2,true);	/*first parameter shows the rows at a time
+		second shows for multiselecting either true or false
+		*/
+		list.add("android");
+		list.add("java");
+		list.add("c++");
+		list.add("youtube");
+		list.add("xml");
+		list.add("c");
+		list.addActionListener(this);
+		add(list);
+	}
+	
+	public void actionPerformed(ActionEvent e)
+	{
+		int arr[] = list.getSelectedIndexes();
+		
+		for(int i=0;i<arr.length;i++) 
+		{
+			str +=list.getItem(arr[i]);
+		}
+		
+		showStatus(str);
+	}
+}
