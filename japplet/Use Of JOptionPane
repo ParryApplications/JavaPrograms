@@ -1,0 +1,56 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ParasLearning;
+
+import javax.swing.JApplet;
+import javax.swing.*;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+/**
+ *
+ * @author MH
+ */
+public class JAppletGUI extends JApplet implements ActionListener{
+
+    /**
+     * Initialization method that will be called after the applet is loaded into
+     * the browser.
+     */
+    JLabel label1;
+    JButton button1;
+    JPasswordField passfield;
+    
+    public void init() {
+        Container ref = getContentPane();   //this container is import from AWT
+        // TODO start asynchronous download of heavy resources
+        ref.setLayout(new FlowLayout());
+        button1 = new JButton("Save");
+        button1.addActionListener(this);
+        label1 = new JLabel("Enter Your Password");
+        passfield = new JPasswordField(20);
+        ref.add(label1);
+        ref.add(passfield);
+        ref.add(button1);
+    }
+    
+    public void actionPerformed(ActionEvent e)      //import java.awt.event.actionevent for this method
+    {
+        String str = "";
+        if(e.getSource() == button1)
+        {
+            if(passfield.getText().equals("paras")) //it is imp step
+                str = "Right User";
+            else
+                str = "Wrong User";
+        }
+        
+        JOptionPane.showMessageDialog(null, str);
+    }
+
+    // TODO overwrite start(), stop() and destroy() methods
+}
