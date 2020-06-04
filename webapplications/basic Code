@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>Paras Learning Web</title>
+</head>
+<body>
+<h1>Hello Frnds</h1>
+<%=  new java.util.Date() %>	//use for JSP
+</body>
+</html>
