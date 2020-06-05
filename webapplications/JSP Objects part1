@@ -1,0 +1,8 @@
+<html>
+<body>
+<h1>JSP Objects</h1>
+<%! int a = 10; %>	<%--use of declaration tag in the form of java language--%>
+
+Value of a:<%= a %> <%-- expression tag --%>
+</body>
+</html>
