@@ -1,0 +1,19 @@
+<%@ page import="java.util.*" %>
+<html>
+<body>
+<form action="LearningWeb.jsp">
+Enter Your Name: <input type="text" name="name">
+<input type="submit" value="save">
+</form>
+<br>
+<%
+String name = request.getParameter("name");
+
+session.setAttribute("user_name",name);
+
+String ss_name = (String)session.getAttribute("user_name");
+out.println(ss_name);
+
+%>
+</body>
+</html>
