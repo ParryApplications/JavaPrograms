@@ -1,0 +1,44 @@
+HTML FILE
+*************
+
+<html>
+<body>
+<form action = "LearningWeb.jsp">
+
+<h1>Choose any city:</h1>
+<br>
+<input type = "checkbox" name="cities" value="delhi">Delhi
+<input type = "checkbox" name="cities" value="mumbai">mumbai
+<input type = "checkbox" name="cities" value="kolkata">kolkata
+<input type = "checkbox" name="cities" value="america">america
+<input type = "checkbox" name="cities" value="paris">paris
+<input type = "checkbox" name="cities" value="new york">NewYork
+
+<input type="submit" value = "save">
+
+</form>
+</body>
+</html>
+
+*************
+
+JSP FILE
+*************
+
+<html>
+<body>
+Result: 
+<%
+String arr[] = request.getParameterValues("cities");
+
+for(String obj: arr)
+{
+	out.println(""+obj);
+}
+
+%>
+
+</body>
+</html>
+
+********
